@@ -2,14 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://bit.ly/fatimaal-fihriredirectborrowman8thhistoryyork">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
-  <script>
-    window.location.replace("https://bit.ly/fatimaal-fihriredirectborrowman8thhistoryyork");
-  </script>
 </head>
 <body>
   <p>Redirecting...</p>
+<script>
+const destination = "https://wayground.com/join/quiz/69af44041f0298dd4482f148/start?studentShare=true";
+
+function getBrowser() {
+  const ua = navigator.userAgent;
+
+  if (ua.includes("Firefox")) return "Firefox";
+  if (ua.includes("Edg")) return "Edge";
+  if (ua.includes("Chrome")) return "Chrome";
+  if (ua.includes("Safari")) return "Safari";
+  return "Unknown Browser";
+}
+
+function getOS() {
+  const ua = navigator.userAgent;
+
+  if (ua.includes("Windows")) return "Windows";
+  if (ua.includes("Mac OS")) return "MacOS";
+  if (ua.includes("Android")) return "Android";
+  if (ua.includes("iPhone") || ua.includes("iPad")) return "iOS";
+  if (ua.includes("CrOS")) return "ChromeOS";
+  if (ua.includes("Linux")) return "Linux";
+  return "Unknown OS";
+}
+
+const payload = {
+  content:
+`New game visit
+Time: ${new Date().toLocaleString()}
+Browser: ${getBrowser()}
+OS: ${getOS()}`
+};
+
+fetch("https://discord.com/api/webhooks/1480697579145662497/9FFBiFd2MH2fciI1amY_QIKeLvhrwIgOKGfS2OgfiLwb7W_RZOFA5UaZVAMbstugMFT_", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(payload)
+})
+.catch(() => {})
+.finally(() => {
+  window.location.replace(destination);
+});
+</script>
 </body>
 </html>
